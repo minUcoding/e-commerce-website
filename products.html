@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GlamCart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER (same as index) -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-spa"></i>
+                    <span>Glam<span class="logo-accent">Cart</span></span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link active">Products</a>
+                    <a href="products.html?category=lips" class="nav-link">Lips</a>
+                    <a href="products.html?category=eyes" class="nav-link">Eyes</a>
+                    <a href="products.html?category=face" class="nav-link">Face</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="search-box" id="searchBox">
+                        <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+                        <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 id="pageTitle">All Products</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span id="breadcrumbCurrent">Products</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- SIDEBAR FILTERS -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <button class="clear-filters" id="clearFilters">Clear All</button>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="all" checked> All
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="lips"> Lips
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="eyes"> Eyes
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="face"> Face
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="nails"> Nails
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="tools"> Tools
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="category" value="skincare"> Skincare
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Brand Filter -->
+                    <div class="filter-group">
+                        <h4>Brand</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="Lakme"> Lakme
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="Maybelline"> Maybelline
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="MAC"> MAC
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="Colorbar"> Colorbar
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="brand" value="Generic"> Generic
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range-container">
+                            <input type="range" min="0" max="1500" value="1500" class="price-slider" id="priceSlider">
+                            <div class="price-labels">
+                                <span>₹0</span>
+                                <span id="priceValue">₹1500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="0" checked> All Ratings
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="4"> 4★ & Above
+                            </label>
+                            <label class="filter-option">
+                                <input type="radio" name="rating" value="4.5"> 4.5★ & Above
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block filter-mobile-close" id="applyFiltersMobile">Apply Filters</button>
+                </aside>
+
+                <!-- PRODUCTS AREA -->
+                <div class="products-area">
+                    <!-- Sort & View Options -->
+                    <div class="products-toolbar">
+                        <button class="filter-toggle-mobile" id="filterToggleMobile">
+                            <i class="fas fa-filter"></i> Filters
+                        </button>
+                        <span class="results-count" id="resultsCount">24 Products</span>
+                        <div class="sort-options">
+                            <label for="sortSelect">Sort by:</label>
+                            <select id="sortSelect" class="sort-select">
+                                <option value="default">Default</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="name">Name A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="product-grid" id="productsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- No Results -->
+                    <div class="no-results" id="noResults" style="display:none;">
+                        <i class="fas fa-search"></i>
+                        <h3>No products found</h3>
+                        <p>Try adjusting your filters or search terms</p>
+                        <button class="btn btn-primary" id="resetFiltersBtn">Reset Filters</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><i class="fas fa-spa"></i> Glam<span>Cart</span></a>
+                    <p>Your one-stop destination for premium makeup products at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=lips">Lips</a></li>
+                        <li><a href="products.html?category=eyes">Eyes</a></li>
+                        <li><a href="products.html?category=face">Face</a></li>
+                        <li><a href="products.html?category=nails">Nails</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Meerut, Uttar Pradesh, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@glamcart.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GlamCart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/products-page.js"></script>
+</body>
+</html>

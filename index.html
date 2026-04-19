@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlamCart - Your Beauty Destination</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-spa"></i>
+                    <span>Glam<span class="logo-accent">Cart</span></span>
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="products.html?category=lips" class="nav-link">Lips</a>
+                    <a href="products.html?category=eyes" class="nav-link">Eyes</a>
+                    <a href="products.html?category=face" class="nav-link">Face</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="search-box" id="searchBox">
+                        <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+                        <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ HERO SLIDER ============ -->
+    <section class="hero-slider" id="heroSlider">
+        <div class="slider-wrapper">
+            <div class="slide active" style="background-image: linear-gradient(135deg, rgba(199,44,65,0.85), rgba(142,36,170,0.85)), url('1.jpg');">
+                <div class="slide-content">
+                    <span class="slide-tag">New Collection 2025</span>
+                    <h1>Discover Your <br><span class="highlight">Perfect Shade</span></h1>
+                    <p>Explore our curated collection of premium makeup products at unbeatable prices</p>
+                    <a href="products.html" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(135deg, rgba(233,30,99,0.85), rgba(156,39,176,0.85)), url('2.jpg');">
+                <div class="slide-content">
+                    <span class="slide-tag">Best Sellers</span>
+                    <h1>Lips That <br><span class="highlight">Speak Volumes</span></h1>
+                    <p>From bold reds to subtle nudes — find your signature lip color</p>
+                    <a href="products.html?category=lips" class="btn btn-primary">Shop Lipsticks <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(135deg, rgba(103,58,183,0.85), rgba(63,81,181,0.85)), url('3.jpg');">
+                <div class="slide-content">
+                    <span class="slide-tag">Up to 40% Off</span>
+                    <h1>Eyes That <br><span class="highlight">Mesmerize</span></h1>
+                    <p>Eye palettes, liners & mascaras to create stunning eye looks</p>
+                    <a href="products.html?category=eyes" class="btn btn-primary">Shop Eye Makeup <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- ============ CATEGORY TABS ============ -->
+    <section class="categories section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Browse By</span>
+                <h2 class="section-title">Shop By Category</h2>
+            </div>
+            <div class="category-grid">
+                <a href="products.html?category=lips" class="category-card">
+                    <div class="category-icon"><i class="fas fa-kiss-wink-heart"></i></div>
+                    <h3>Lips</h3>
+                    <p>Lipsticks, Glosses & Liners</p>
+                </a>
+                <a href="products.html?category=eyes" class="category-card">
+                    <div class="category-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Eyes</h3>
+                    <p>Shadows, Liners & Mascaras</p>
+                </a>
+                <a href="products.html?category=face" class="category-card">
+                    <div class="category-icon"><i class="fas fa-face-smile"></i></div>
+                    <h3>Face</h3>
+                    <p>Foundation, Blush & More</p>
+                </a>
+                <a href="products.html?category=nails" class="category-card">
+                    <div class="category-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>Nails</h3>
+                    <p>Polishes & Nail Art</p>
+                </a>
+                <a href="products.html?category=tools" class="category-card">
+                    <div class="category-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Tools</h3>
+                    <p>Brushes & Sponges</p>
+                </a>
+                <a href="products.html?category=skincare" class="category-card">
+                    <div class="category-icon"><i class="fas fa-pump-soap"></i></div>
+                    <h3>Skincare</h3>
+                    <p>Cleansers & Removers</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURED PRODUCTS ============ -->
+    <section class="featured-products section" id="featuredProducts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Top Picks</span>
+                <h2 class="section-title">Best Sellers</h2>
+                <p class="section-subtitle">Our most loved products chosen by thousands of beauty enthusiasts</p>
+            </div>
+            <div class="product-grid" id="bestSellerGrid">
+                <!-- Populated by JS -->
+            </div>
+            <div class="section-cta">
+                <a href="products.html" class="btn btn-outline">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROMOTIONAL BANNER ============ -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-card promo-card-large" style="background-image: linear-gradient(135deg, rgba(233,30,99,0.9), rgba(156,39,176,0.9)), url('https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800');">
+                    <span class="promo-tag">Limited Offer</span>
+                    <h3>Flat 30% Off</h3>
+                    <p>On all MAC products this week</p>
+                    <a href="products.html?brand=MAC" class="btn btn-white">Shop Now</a>
+                </div>
+                <div class="promo-card" style="background-image: linear-gradient(135deg, rgba(103,58,183,0.9), rgba(63,81,181,0.9)), url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800');">
+                    <span class="promo-tag">New Arrivals</span>
+                    <h3>Fresh Drops</h3>
+                    <p>Check out what's new</p>
+                    <a href="products.html?filter=new" class="btn btn-white">Explore</a>
+                </div>
+                <div class="promo-card" style="background-image: linear-gradient(135deg, rgba(233,30,99,0.9), rgba(255,87,34,0.9)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800');">
+                    <span class="promo-tag">Combo Deals</span>
+                    <h3>Buy 2 Get 1 Free</h3>
+                    <p>On selected lip products</p>
+                    <a href="products.html?category=lips" class="btn btn-white">Shop Lips</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NEW ARRIVALS ============ -->
+    <section class="new-arrivals section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Just In</span>
+                <h2 class="section-title">New Arrivals</h2>
+                <p class="section-subtitle">Be the first to try our latest beauty products</p>
+            </div>
+            <div class="product-grid" id="newArrivalGrid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURES / WHY CHOOSE US ============ -->
+    <section class="features section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Us</span>
+                <h2 class="section-title">Why Choose GlamCart?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h3>Free Delivery</h3>
+                    <p>Free shipping on orders above ₹499 across India</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>100% Authentic</h3>
+                    <p>All products are sourced directly from authorized brands</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-rotate-left"></i></div>
+                    <h3>Easy Returns</h3>
+                    <p>15-day hassle-free return and refund policy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer support via chat and phone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reviews</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-grid" id="testimonialGrid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Glam! ✨</h2>
+                    <p>Subscribe to get exclusive offers, beauty tips, and new arrival updates</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-spa"></i> Glam<span>Cart</span>
+                    </a>
+                    <p>Your one-stop destination for premium makeup products at affordable prices. Based in Meerut, serving beauty lovers everywhere.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=lips">Lips</a></li>
+                        <li><a href="products.html?category=eyes">Eyes</a></li>
+                        <li><a href="products.html?category=face">Face</a></li>
+                        <li><a href="products.html?category=nails">Nails</a></li>
+                        <li><a href="products.html?category=tools">Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Meerut, Uttar Pradesh, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@glamcart.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GlamCart. All rights reserved. | Designed for College Project Demo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ============ TOAST NOTIFICATION ============ -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
